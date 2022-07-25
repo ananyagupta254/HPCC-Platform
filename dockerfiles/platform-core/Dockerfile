@@ -69,6 +69,7 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8     
 
 COPY --from=build /opt/HPCCSystems /opt/HPCCSystems
+COPY --from=build /hpcc-dev/HPCC-Platform/plugins/nlp/nlp-engine/analyzers /opt/HPCCSystems/plugins/nlp/nlp-engine/analyzers
 COPY --from=build /usr/local/bin/kubectl /usr/local/bin/kubectl
 
 # NB: added in platform-build, but need to re-add as this image is not
